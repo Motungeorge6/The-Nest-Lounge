@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Menu from "./pages/menu/Menu";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
 const App = () => {
   return (
     <Menu />
