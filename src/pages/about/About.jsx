@@ -1,9 +1,10 @@
 import React from "react";
-import "../about/about.css";
+import "./about.css";
 import { Parallax } from "react-parallax";
-import Bar from "../assets/bar.jpg";
-import Bottles from "../assets/bottles.jpg";
-import Lounge from "../assets/lounges.jpg";
+import Bar from "../../assets/bar.jpg";
+import Bottles from "../../assets/bottles.jpg";
+import Lounge from "../../assets/Lounge.jpg";
+
 const About = () => {
   return (
     <div className="container">
@@ -13,7 +14,7 @@ const About = () => {
         </div>
       </Parallax>
 
-      {/* <div className="content">
+      <div className="content">
         <Parallax strength={300} bgImage={Bottles}>
           <div className="content">
             <div className="text-content">Blur Parallax</div>
@@ -27,7 +28,7 @@ const About = () => {
             <div className="text-content">Reverse Parallax</div>
           </div>
         </Parallax>
-      </div> */}
+      </div>
     </div>
   );
 };
