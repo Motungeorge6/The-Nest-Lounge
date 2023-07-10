@@ -3,12 +3,14 @@ import { Parallax } from "react-parallax";
 import Bar from "../../assets/bar.jpg";
 import Bottles from "../../assets/bottles.jpg";
 import "./homeStyled.css";
-import styles from "./home.module.scss";
-import { Button, Text } from "@mantine/core";
+import styles from './home.module.scss'
+import { Button, Footer, Text } from "@mantine/core";
+import SideBarButton from "../../component/SideBarButton";
 
 const Home = () => {
   return (
     <>
+      <SideBarButton/>
       <Parallax strength={300} bgImage={Bar}>
         <div className={styles.container}>
           <div className={styles.navbar}>
@@ -66,7 +68,17 @@ const Home = () => {
               </div>
             </div>
             <div className={styles.down}>
-              <div className={styles.bar}></div>
+              <div className={styles.bar}>
+              <Text w={'100%'} align="left">
+                Hello, Neighbour
+               </Text>           
+                <Text w={'100%'} align="left"> 
+                Happy Hour                
+                </Text>
+                <Text w={'100%'} align="left">
+                  12PM-3PM Monday-Thursday
+                </Text>
+              </div>
             </div>
           </main>
         </div>
@@ -82,6 +94,8 @@ const Home = () => {
           <div className={styles.down}></div>
         </div>
       </Parallax>
+
+
     </>
   );
 };
