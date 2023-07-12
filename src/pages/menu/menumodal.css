@@ -1,0 +1,32 @@
+.menucontainer {
+  background-color: white;
+  width: 300.76px;
+  max-height: 80%;
+   /* background-size: cover; */
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  border-radius: 5px;
+  padding: 4px;
+  flex-direction: column;
+}
+.parentcontainer{
+  width: 100vw;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.categories {
+  width: 290px;
+  background-color: black;
+  /* background-size: cover; */
+  color: white;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: 1px;
+  height: 34px;
+  border-radius: 8px;
+}
