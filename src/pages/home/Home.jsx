@@ -219,7 +219,7 @@ const Home = () => {
         bgImage={Lounge}
         style={{ height: "100vh" }}
       ></Parallax>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };
