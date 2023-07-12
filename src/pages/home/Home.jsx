@@ -2,21 +2,16 @@ import React, { useState } from "react";
 import { Parallax } from "react-parallax";
 import Bottles from "../../assets/bottles.jpg";
 import "./homeStyled.css";
-import styles from './home.module.scss'
+import styles from "./home.module.scss";
 import { Button, Text } from "@mantine/core";
 import SideBarButton from "../../component/SideBarButton";
 import Footer from "../footer/Footer";
 import Logo from "../../assets/Logo.png";
-import styles from "./home.module.scss";
-import { Button, Text } from "@mantine/core";
 import { Navigate, useHistory, useNavigate } from "react-router-dom";
-import SideBarButton from "../../component/SideBarButton";
-import Footer from "../footer/Footer";
 import Lounge from "../../assets/Lounge.jpg";
 import TheNest from "../../assets/The-Nest-Lounge.jpg";
 import Nest from "../../assets/The nest.jpg";
 import Bar from "../../assets/food.jpeg";
-
 
 const Home = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -51,7 +46,7 @@ const Home = () => {
   }
 
   return (
-    <div className="home-container" style={{ margin: "0" }}>
+    <>
       <SideBarButton />
       <Parallax strength={300} bgImage={TheNest}>
         <div className={styles.container}>
@@ -64,9 +59,7 @@ const Home = () => {
                 <a href="/">Home</a>
                 <a href="/About">about</a>
                 <a href="/Menu">Menu</a>
-                <a href="/">Order Online</a>   
                 <a href="reserve/">Book a Table</a>
-
               </div>
             </div>
             <div className={styles.down}>
@@ -147,9 +140,7 @@ const Home = () => {
           <div className={styles.up}></div>
           <div className={styles.down}></div>
         </div>
-        
       </Parallax>
-    </>
 
       <Parallax strength={300} className="reserve-containers">
         <div className="reserve-container">
@@ -229,9 +220,8 @@ const Home = () => {
         bgImage={Lounge}
         style={{ height: "100vh" }}
       ></Parallax>
-      <Footer />
-    </div>
-
+      <Footer></Footer>
+    </>
   );
 };
 
