@@ -1,26 +1,120 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  
-  .container {
-    margin: 75% 0;
-  }
-  .content {
-    height: 100vh;
-  }
-  
-  .text-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 5px 15px;
-    transform: translate(-50%, -50%);
-    background: gray;
-    color: white;
-    border-radius: 20px;
-    font-size: 50px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container {
+  margin: 75% 0;
+}
+.content {
+  height: 100vh;
+}
+
+.text-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 5px 15px;
+  transform: translate(-50%, -50%);
+  background: gray;
+  color: white;
+  border-radius: 20px;
+  font-size: 50px;
+}
+
+.reserve-containers {
+  height: 60vh;
+  background-color: rgb(225, 208, 182);
+}
+
+.reserve-container p {
+  color: #20241a;
+  margin-top: 3%;
+  font-size: 16px;
+}
+
+.reserve-container h1 {
+  color: #20241a;
+  font-size: 42px;
+}
+
+.reserve-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  align-items: center;
+}
+
+.select-guest {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 100%;
+  gap: 3%;
+}
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-input {
+  border-radius: 3px;
+  height: 40px;
+  background-color: rgb(225, 208, 182);
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  background-color: rgb(225, 208, 182);
+  border: 1px solid #000;
+  border-radius: 3px;
+  left: 0;
+  padding: 10px;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.dropdown-menu li {
+  padding: 3%;
+  font-size: small;
+}
+
+.dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.dropdown-icon.open {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.form-row {
+  display: flex;
+  gap: 10%;
+}
+input {
+  border: 1px solid #000000;
+  height: 40px;
+  width: 250px;
+  border-radius: 3px;
+  background-color: rgb(225, 208, 182);
+}
+
+.submit-button {
+  font-size: 14px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  width: 100px;
+  color: #e1d0b6;
+  height: 40px;
+  margin-left: 3%;
+  background-color: #20241a;
+}
