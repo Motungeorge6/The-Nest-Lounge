@@ -4,7 +4,7 @@ import "./menumodal.css";
 const Menucat = () => {
     // const containerStyling ={
         
-    }
+    // }
 
   return (
 <div className='parentcontainer'>
