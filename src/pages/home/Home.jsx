@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { Parallax } from "react-parallax";
 import Bottles from "../../assets/bottles.jpg";
 import "./homeStyled.css";
+import styles from './home.module.scss'
+import { Button, Text } from "@mantine/core";
+import SideBarButton from "../../component/SideBarButton";
+import Footer from "../footer/Footer";
 import Logo from "../../assets/Logo.png";
 import styles from "./home.module.scss";
 import { Button, Text } from "@mantine/core";
@@ -12,6 +16,7 @@ import Lounge from "../../assets/Lounge.jpg";
 import TheNest from "../../assets/The-Nest-Lounge.jpg";
 import Nest from "../../assets/The nest.jpg";
 import Bar from "../../assets/food.jpeg";
+
 
 const Home = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -57,9 +62,11 @@ const Home = () => {
               </div>
               <div className={styles.right}>
                 <a href="/">Home</a>
-                <a href="/about">about</a>
-                <a href="menu/">Menu</a>
+                <a href="/About">about</a>
+                <a href="/Menu">Menu</a>
+                <a href="/">Order Online</a>   
                 <a href="reserve/">Book a Table</a>
+
               </div>
             </div>
             <div className={styles.down}>
@@ -140,7 +147,10 @@ const Home = () => {
           <div className={styles.up}></div>
           <div className={styles.down}></div>
         </div>
+        
       </Parallax>
+    </>
+
       <Parallax strength={300} className="reserve-containers">
         <div className="reserve-container">
           <h1>Reserve a Table</h1>
@@ -221,6 +231,7 @@ const Home = () => {
       ></Parallax>
       <Footer></Footer>
     </div>
+
   );
 };
 
