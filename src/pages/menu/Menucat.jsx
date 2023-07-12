@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import "./menumodal.css";
 
 const Menucat = () => {
-    const containerStyling ={
+    // const containerStyling ={
         
-    }
+    // }
 
   return (
 <div className='parentcontainer'>
