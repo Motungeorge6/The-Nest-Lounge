@@ -3,8 +3,9 @@ import { Parallax } from "react-parallax";
 import Bar from '../../assets/bar.jpg'
 import "./homeStyled.css";
 import styles from './home.module.scss'
-import { Button, Footer, Text } from "@mantine/core";
+import { Button, Text } from "@mantine/core";
 import SideBarButton from "../../component/SideBarButton";
+import Footer from "../footer/Footer";
 
 const Home = () => {
   return (
@@ -19,8 +20,8 @@ const Home = () => {
               </div>
               <div className={styles.right}>
                 <a href="/">Home</a>
-                <a href="/">about</a>
-                <a href="/">Menu</a>
+                <a href="/About">about</a>
+                <a href="/Menu">Menu</a>
                 <a href="/">Order Online</a>
               </div>
             </div>
@@ -91,8 +92,9 @@ const Home = () => {
           <div className={styles.down}></div>
 
         </div>
+        
       </Parallax>
-
+      <Footer/>
 
     </>
   );

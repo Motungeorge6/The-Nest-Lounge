@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(/src/assets/backgroundimage1.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+.container{
+    display: flex;
+    background: none;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    margin-bottom: 0px;
+    flex-direction: column;
+}
+  .top-container{
+    margin-bottom: 1px;
+  }
+  
+  .bell{
+    float: right;
+    background-color: rgb(157, 20, 20);
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+  }
+  .logo{
+    height: 160px;
+    width: 220px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .middle-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 30%;
+    background: none;
+    flex-direction: column;
+  }
+  .menu-button{
+        background: rgb(157, 20, 20);
+        border-radius: 100px;
+        font-family: 'Montserrat', sans-serif;
+        color: rgb(249, 189, 91);
+        width: 160px;
+        height: 50px;
+        font-size: 20px;
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+  }
+.menu-text{
+    color: rgb(249, 189, 91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.down-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.facebook-cont ,.instagram-cont{
+    border-radius: 0%;
+    color: white;
+}
+.facebook ,.instagram{
+    background-color: rgb(157, 20, 20);
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+}
