@@ -7,7 +7,7 @@ import logo from "../../assets/Logo.png"
 
 const Menu = () =>{
     return (
-            <div className="container">
+            <div className="parenta">
               <div className="top-container">
                 <div className="notification-div">
                   <img className="bell" src={bell} alt="notification image" />

@@ -11,6 +11,7 @@
   flex-direction: column;
 }
 .parentcontainer{
+  background: url(/src/assets/backgroundimage1.jpg) no-repeat center center fixed;
   width: 100vw;
   display: flex;
   height: 100vh;
