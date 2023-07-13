@@ -4,7 +4,7 @@ import { Parallax } from "react-parallax";
 
 const Footer = () => {
   return (
-    <Parallax className="container">
+    <Parallax strength={300} className="container">
       <div className="upper-div">
         <div className="one">The Whale's Tail</div>
         <div className="two">
