@@ -32,7 +32,11 @@ const About = () => {
           </p>
         </div>
 
-        <div></div>
+        <div>
+          <h2>We Are Open for Private Events</h2>
+
+          
+        </div>
       </div>
       <Footer/>
     </AboutView>
