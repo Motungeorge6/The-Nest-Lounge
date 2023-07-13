@@ -12,6 +12,7 @@ import Lounge from "../../assets/Lounge.jpg";
 import TheNest from "../../assets/The-Nest-Lounge.jpg";
 import Nest from "../../assets/The nest.jpg";
 import Bar from "../../assets/food.jpeg";
+import NavBar from "../../component/NavBar";
 
 const Home = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -49,18 +50,20 @@ const Home = () => {
     <>
       <SideBarButton />
       <Parallax strength={300} bgImage={TheNest}>
+        <NavBar/>
         <div className={styles.container}>
           <div className={styles.navbar}>
             <div className={styles.up}>
-              <div className={styles.left}>
+              {/* <div className={styles.left}>
                 <img src={Logo} alt="logo" style={{ width: "150px" }} />
               </div>
               <div className={styles.right}>
                 <a href="/">Home</a>
-                <a href="/About">about</a>
-                <a href="/Menu">Menu</a>
-                <a href="reserve/">Book a Table</a>
-              </div>
+                <a href="/about">about</a>
+                <a href="/menu">Menu</a>
+                <a href="/reserve">Book a Table</a>
+              </div> */}
+
             </div>
             <div className={styles.down}>
               <div className={styles.left}>

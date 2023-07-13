@@ -28,13 +28,13 @@ body {
     margin: 15px;
     border-radius: 10px;
   }
-  .logo{
+  /* .logo{
     height: 160px;
     width: 220px;
     display: block;
     margin: 0 auto;
     margin-bottom: 30px;
-  }
+  } */
   .middle-container{
     display: flex;
     align-items: center;
@@ -91,13 +91,13 @@ body {
   align-items: center;
 }
 
-.content {
+/* .content {
   width: 75%;
   height: 70px;
   margin-top: 10%;
   display: flex;
   border: 1px solid rgba(225, 208, 182, 1);
-}
+} */
 
 .logo-container {
   width: 30%;
