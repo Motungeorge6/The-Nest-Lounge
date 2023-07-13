@@ -8,9 +8,12 @@ import NavBar from "../../component/NavBar";
 
 const Menu = () =>{
     return (
+
             <div className="container">
               <NavBar/>
               {/* <div className="top-container">
+            <div className="parenta">
+              <div className="top-container">
                 <div className="notification-div">
                   <img className="bell" src={bell} alt="notification image" />
                 </div>

@@ -1,21 +1,17 @@
-
-body {
-    margin: 0;
-    padding: 0;
-    background: url(/src/assets/backgroundimage1.jpg) no-repeat center center fixed;
-    background-size: cover;
-  }
-.container{
+.parenta{
+  background: url(/src/assets/backgroundimage1.jpg) no-repeat center center fixed;
     display: flex;
-    background: none;
     background-size: cover;
     margin: 0px;
     padding: 0px;
     border: 0px;
     margin-bottom: 0px;
     flex-direction: column;
+    height: 100vh;
+    width: 100vw;
 }
   .top-container{
+    width: 100%;
     margin-bottom: 1px;
   }
   
