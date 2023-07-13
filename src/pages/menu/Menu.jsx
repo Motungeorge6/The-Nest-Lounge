@@ -4,9 +4,14 @@ import facebooklogo from "../../assets/facebook-logo.png"
 import instagramlogo from "../../assets/instagram.png"
 import bell from "../../assets/bell.png"
 import logo from "../../assets/Logo.png"
+import NavBar from "../../component/NavBar";
 
 const Menu = () =>{
     return (
+
+            <div className="container">
+              <NavBar/>
+              {/* <div className="top-container">
             <div className="parenta">
               <div className="top-container">
                 <div className="notification-div">
@@ -29,7 +34,7 @@ const Menu = () =>{
                     <img className="instagram" src={instagramlogo} alt="" />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           );
 }
