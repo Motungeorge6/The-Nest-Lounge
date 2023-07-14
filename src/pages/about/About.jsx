@@ -10,41 +10,43 @@ import Footer from "../footer/Footer";
 
 const About = () => {
   return (
-    <AboutView>
-      <NavBar/>
-      <div className='about'>
-        <div className='info'>
-          <h3>Our Story</h3>
-          <h2>Pub & Eatry Est. 2035</h2>
+    <Parallax bgImage={Bar} strength={300}>
+      <AboutView>
+        <NavBar />
+        <div className="about">
+          <div className="info">
+            <h3>Our Story</h3>
+            <h2>Pub & Eatry Est. 2035</h2>
 
-          <p className='text'>
-            I'm a paragraph. Click here to add your own text and edit me. 
-            It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. 
-            Feel free to drag and drop me anywhere you like on your page. 
-            I’m a great place for you to tell a story and let your users know a little more about you.
-          </p>
-          <p className='text'>
-            This is a great space to write a long text about your company and your services. 
-            You can use this space to go into a little more detail about your company. 
-            Talk about your team and what services you provide. 
-            Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. 
-            Make your company stand out and show your visitors who you are.
-          </p>
+            <p className="text">
+              I'm a paragraph. Click here to add your own text and edit me. It’s
+              easy. Just click “Edit Text” or double click me to add your own
+              content and make changes to the font. Feel free to drag and drop
+              me anywhere you like on your page. I’m a great place for you to
+              tell a story and let your users know a little more about you.
+            </p>
+            <p className="text">
+              This is a great space to write a long text about your company and
+              your services. You can use this space to go into a little more
+              detail about your company. Talk about your team and what services
+              you provide. Tell your visitors the story of how you came up with
+              the idea for your business and what makes you different from your
+              competitors. Make your company stand out and show your visitors
+              who you are.
+            </p>
+          </div>
+
+          <div>
+            <h2>We Are Open for Private Events</h2>
+          </div>
         </div>
-
-        <div>
-          <h2>We Are Open for Private Events</h2>
-
-          
-        </div>
-      </div>
-      <Footer/>
-    </AboutView>
+      </AboutView>
+    </Parallax>
   );
 };
-  
+
 const AboutView = styled.div`
-  color: rgb(225,208,182);
+  color: rgb(225, 208, 182);
 
   .about {
     margin: 2rem 5rem;
@@ -58,31 +60,6 @@ const AboutView = styled.div`
       }
     }
   }
-
 `;
 
 export default About;
-
-// <div className="container">
-//   <Parallax strength={600} bgImage={Bar}>
-//     <div className="content">
-//       <div className="text-content">Normal Parallax</div>
-//     </div>
-//   </Parallax>
-
-//   <div className="content">
-//     <Parallax strength={300} bgImage={Bottles}>
-//       <div className="content">
-//         <div className="text-content">Blur Parallax</div>
-//       </div>
-//     </Parallax>
-//   </div>
-
-//   <div className="content">
-//     <Parallax strength={-600} bgImage={Lounge}>
-//       <div className="content">
-//         <div className="text-content">Reverse Parallax</div>
-//       </div>
-//     </Parallax>
-//   </div>
-// </div>

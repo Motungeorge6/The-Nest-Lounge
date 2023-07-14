@@ -118,9 +118,11 @@
       align-items: center;
       .bar {
         border: 2px solid rgb(225, 208, 182);
-        height: 80%;
+        height: 90%;
         border-radius: var(--rd, 5px);
         width: 60%;
+        padding: 10%;
+        margin-top: 10%;
         top: 0;
         right: 0;
         box-shadow: var(--shd, 0, 1px, 4px, rgba(0, 0, 0, 0.6));

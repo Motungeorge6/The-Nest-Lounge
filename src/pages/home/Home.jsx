@@ -53,7 +53,7 @@ const Home = () => {
         <NavBar />
       </Parallax>
 
-      <Parallax strength={300} bgImage={Nest}>
+      <Parallax strength={300} bgImage={Bottles}>
         <div className={styles.container2}>
           <header>
             <Text size={"24px"} mb={20}>
@@ -114,7 +114,7 @@ const Home = () => {
           </main>
         </div>
       </Parallax>
-      <Parallax strength={300} bgImage={Bar}>
+      <Parallax strength={300} bgImage={Bottles}>
         <div className={styles.container3}>
           <div className={styles.up}></div>
           <div className={styles.down}></div>
@@ -123,68 +123,14 @@ const Home = () => {
 
       <Parallax strength={300} className="reserve-containers">
         <div className="reserve-container">
-          <h1>Reserve a Table</h1>
-          <p>
-            To help us find the best table,select the preferred party
-            size,date,time,of your reservation
-          </p>
-        </div>
-        <div className="select-guest">
-          <div className="dropdown-container">
-            <input
-              type="text"
-              id="dropdown"
-              placeholder="Select Purpose"
-              value={selectedOption}
-              onChange={handleOptionChange}
-              onFocus={toggleDropdown}
-              onBlur={toggleDropdown}
-              className="dropdown-input"
-            />
-            <div
-              className={`dropdown-icon ${isDropdownOpen ? "open" : ""}`}
-              onClick={toggleDropdown}
-            >
-              &#9662;
-            </div>
+          <div className="title-container">
+            <h1>Reserve a Table</h1>
+            <p>
+              To help us find the best table, select the preferred party size,
+              date, and time of your reservation.
+            </p>
+          </div>
 
-            {isDropdownOpen && (
-              <ul className="dropdown-menu">
-                <li onMouseDown={() => handleOptionSelect("1 guest")}>
-                  1 guest
-                </li>
-                <li onMouseDown={() => handleOptionSelect("2 guests")}>
-                  2 guests{" "}
-                </li>
-                <li onMouseDown={() => handleOptionSelect("3 guests")}>
-                  3 guests{" "}
-                </li>
-                <li onMouseDown={() => handleOptionSelect("4 guests")}>
-                  4 guests{" "}
-                </li>
-                <li onMouseDown={() => handleOptionSelect("5 guests")}>
-                  5 guests
-                </li>
-                <li onMouseDown={() => handleOptionSelect("6 guests")}>
-                  6 guests
-                </li>
-              </ul>
-            )}
-          </div>
-          <div className="form-row">
-            <input
-              type="time"
-              placeholder="Time"
-              onChange={handleFullNameChange}
-            />
-            <input
-              type="date"
-              placeholder="Date"
-              id="date"
-              name="date"
-              onChange={handleEmailChange}
-            />
-          </div>
           <button
             type="submit"
             className="submit-button"
@@ -194,6 +140,7 @@ const Home = () => {
           </button>
         </div>
       </Parallax>
+
       <Parallax
         strength={300}
         bgImage={Lounge}
