@@ -1,18 +1,18 @@
 export const routes = [
   {
-    name: 'Home',
-    path: '/'
+    name: "Home",
+    path: "/",
   },
   {
-    name: 'About',
-    path: '/about'
+    name: "About",
+    path: "/about",
   },
   {
-    name: 'Menu',
-    path: '/menu'
+    name: "Menu",
+    path: "/menu",
   },
   {
-    name: 'Reservations',
-    path: '/reservations'
-  }
-]
+    name: "Book a Table",
+    path: "/reserve",
+  },
+];

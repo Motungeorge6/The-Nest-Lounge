@@ -49,32 +49,8 @@ const Home = () => {
   return (
     <>
       <SideBarButton />
-      <Parallax strength={300} bgImage={TheNest}>
-        <NavBar/>
-        <div className={styles.container}>
-          <div className={styles.navbar}>
-            <div className={styles.up}>
-              {/* <div className={styles.left}>
-                <img src={Logo} alt="logo" style={{ width: "150px" }} />
-              </div>
-              <div className={styles.right}>
-                <a href="/">Home</a>
-                <a href="/about">about</a>
-                <a href="/menu">Menu</a>
-                <a href="/reserve">Book a Table</a>
-              </div> */}
-
-            </div>
-            <div className={styles.down}>
-              <div className={styles.left}>
-                <Text size={"44px"}>Drink, Eat, Enjoy.</Text>
-              </div>
-              <div className={styles.right}>
-                <Text size={"24px"}>The Nest Lounge | Alagomeji</Text>
-              </div>
-            </div>
-          </div>
-        </div>
+      <Parallax strength={300} bgImage={TheNest} style={{ height: "100vh" }}>
+        <NavBar />
       </Parallax>
 
       <Parallax strength={300} bgImage={Nest}>
@@ -223,7 +199,6 @@ const Home = () => {
         bgImage={Lounge}
         style={{ height: "100vh" }}
       ></Parallax>
-      <Footer></Footer>
     </>
   );
 };
