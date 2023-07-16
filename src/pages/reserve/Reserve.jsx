@@ -56,7 +56,6 @@ const Collaborate = () => {
           <img src={image} alt="image" style={{
             width: "49vw",
             height: "100vh",
-            overflow: "hidden",
           }}/>
         </div>
       </div>
@@ -141,7 +140,7 @@ const Collaborate = () => {
             <section>
               <label htmlFor="">Number of people Attending</label>
               <input
-                type="number"
+                type="text"
                 placeholder="No of people Attending"
                 id="attendees"
                 name="attendees"
