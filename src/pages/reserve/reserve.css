@@ -1,6 +1,6 @@
 .collaborate-container {
   width: 100%;
-  background-color: #ff5a5a;
+  background-color: rgb(32, 36, 26);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -66,7 +66,6 @@
 }
 input {
   border: 1px solid transparent;
-  width: 100%;
   height: 50px;
   padding: 2%;
   border-radius: 10px;
