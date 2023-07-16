@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../pages/reserve/reserve.css";
+import image from "../../assets/backgroundimage1.jpg"
 
 const Collaborate = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -20,8 +21,10 @@ const Collaborate = () => {
 
   const [fullName, setFullName] = useState("");
   const [date, setDate] = useState("");
-  const [company, setCompany] = useState("");
-  const [description, setDescription] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [event, setEvent] = useState("");
+
 
   const handleFullNameChange = (event) => {
     setFullName(event.target.value);
@@ -31,33 +34,30 @@ const Collaborate = () => {
     setDate(event.target.value);
   };
 
-  const handleCompanyChange = (event) => {
-    setCompany(event.target.value);
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
   };
 
-  const handleDescriptionChange = (event) => {
-    setDescription(event.target.value);
+  const handlePhoneNumberChange = (event) => {
+    setPhoneNumber(event.target.value);
+  };
+  const handleEventChange = (event) => {
+    setEvent(event.target.value);
   };
   function handleSubmit(event) {
     event.preventDefault();
 
-    if (fullName && date && company && description) {
-      alert("Successful!");
-    } else {
-      alert("Unsuccessful. Please fill in all the required fields.");
-    }
   }
 
   return (
     <div className="collaborate-container">
       <div className="inner-container">
         <div>
-          <h1>MAKE A RESERVATION</h1>
-          <p>
-            lorem ipsum ghsatgcfxgxd vydaaaa ftdea5ax dxaxvyxx garxa5xeaxax
-            adxrca fxaxy axdadxaxagxdb fxtdaaxa.xdarxsaxacxtaba vbdarxxaxf
-            faxdaxa x axfax
-          </p>
+          <img src={image} alt="image" style={{
+            width: "49vw",
+            height: "100vh",
+            overflow: "hidden",
+          }}/>
         </div>
       </div>
       <div className="form-container">
@@ -76,7 +76,6 @@ const Collaborate = () => {
               />{" "}
             </section>
             <section>
-              {" "}
               <label>Date Of Birth</label>
               <input
                 type="date"
@@ -91,43 +90,80 @@ const Collaborate = () => {
 
           <div className="form-row">
             <section>
-              <label htmlFor="company">Company</label>
+              <label htmlFor="email">Email Address</label>
               <input
                 type="text"
-                value={company}
-                onChange={handleCompanyChange}
-                placeholder="Company"
-                id="company"
-                name="company"
+                value={email}
+                onChange={handleEmailChange}
+                placeholder="e.g @example.com"
+                id="email"
+                name="email"
               />
             </section>
             <section>
               {" "}
+              <label htmlFor="phoneNumber">Phone Number</label>
               <input
                 type="text"
-                value={company}
-                onChange={handleCompanyChange}
-                placeholder="Company"
-                id="company"
-                name="company"
+                value={phoneNumber}
+                onChange={handlePhoneNumberChange}
+                placeholder="phone number"
+                id="phoneNumber"
+                name="phoneNumber"
               />
+            </section>
+            <section style={{
+              position: "absolute",
+              display: "flex",
+              justifyContent: "space-between",
+              gap: "22%",
+              marginTop: "12%",
+            }}>
+            <section>
+              <label htmlFor="phoneNumber">Type of Event</label>
+             <select name="event" id="event"value={event} onChange={handleEventChange} style={{
+              width: '250px',
+              height: '50px',
+              borderRadius: '7px',
+              backgroundColor: 'rgb(225, 208, 182)'
+
+             }}>
+             <option value="">Select...</option>
+              <option>Birthday</option>
+              <option>Buffet</option>
+              <option>Friends Hangout</option>
+              <option>Office Hangout</option>
+              <option>Couple Special</option>
+              <option>Proposal</option>
+              <option>Bridal Shower</option>
+             </select>
+            </section>
+            <section>
+              <label htmlFor="">Number of people Attending</label>
+              <input
+                type="number"
+                placeholder="No of people Attending"
+                id="attendees"
+                name="attendees"
+              />
+            </section>
             </section>
           </div>
 
-          <textarea
-            className="form-description"
-            id="description"
-            name="description"
-            value={description}
-            onChange={handleDescriptionChange}
-          ></textarea>
+          <div>
           <button
             type="submit"
             className="submit-button"
             onClick={handleSubmit}
+            style={{
+              marginTop: '130px',
+              marginLeft: '500px'
+
+            }}
           >
             Submit
           </button>
+          </div>
         </div>
       </div>
     </div>
