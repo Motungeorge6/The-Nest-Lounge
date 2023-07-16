@@ -5,6 +5,88 @@ import favouriteicon from "../../assets/like.png";
 import returnicon from "../../assets/back.png";
 
 const Itemslist = () => {
+  const snippets = [];
+  for (let i = 0; i < 10; i++) {
+    snippets.push(
+      <div className="items-cat" key={i}>
+        <p className="menu-categories-title">STARTERS &amp; SHAREABLES</p>
+        <div className="items-list">
+          <img
+            className="item-list-image"
+            src="https://images.mydigimenu.com/media/ClCan7aQ9k/ClCan7aQ9k-03072023070000475.jpeg?w=200&h=200"
+            alt=""
+          />
+          <div className="other-info">
+            <p className="item-name">JUMBO COMBO VEG</p>
+            <p className="description">
+              A delectable array of our most popular veggie starters: Onion
+              rings, potato skins, bruschetta and Southwest spring rolls.
+            </p>
+            <div className="to-buy">
+              <p className="item-price">₦15500.00</p>
+              <div className="add-button">ADD</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="items-list">
+          <img
+            className="item-list-image"
+            src="https://images.mydigimenu.com/media/ClCan7aQ9k/ClCan7aQ9k-03072023070000475.jpeg?w=200&h=200"
+            alt=""
+          />
+          <div className="other-info">
+            <p className="item-name">JUMBO COMBO VEG</p>
+            <p className="description">
+              A delectable array of our most popular veggie starters: Onion
+              rings, potato skins, bruschetta and Southwest spring rolls.
+            </p>
+            <div className="to-buy">
+              <p className="item-price">₦15500.00</p>
+              <div className="add-button">ADD</div>
+            </div>
+          </div>
+        </div>
+        <div className="items-list">
+          <img
+            className="item-list-image"
+            src="https://images.mydigimenu.com/media/ClCan7aQ9k/ClCan7aQ9k-03072023070000475.jpeg?w=200&h=200"
+            alt=""
+          />
+          <div className="other-info">
+            <p className="item-name">JUMBO COMBO VEG</p>
+            <p className="description">
+              A delectable array of our most popular veggie starters: Onion
+              rings, potato skins, bruschetta and Southwest spring rolls.
+            </p>
+            <div className="to-buy">
+              <p className="item-price">₦15500.00</p>
+              <div className="add-button">ADD</div>
+            </div>
+          </div>
+        </div>
+        <div className="items-list">
+          <img
+            className="item-list-image"
+            src="https://images.mydigimenu.com/media/ClCan7aQ9k/ClCan7aQ9k-03072023070000475.jpeg?w=200&h=200"
+            alt=""
+          />
+          <div className="other-info">
+            <p className="item-name">JUMBO COMBO VEG</p>
+            <p className="description">
+              A delectable array of our most popular veggie starters: Onion
+              rings, potato skins, bruschetta and Southwest spring rolls.
+            </p>
+            <div className="to-buy">
+              <p className="item-price">₦15500.00</p>
+              <div className="add-button">ADD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="itemscontainer">
       <div className="fixedheader">
@@ -126,51 +208,7 @@ const Itemslist = () => {
       {/* ---------------------------------------------------------------------------------------------------------- */}
       <div className="items-div">
         <div className="items-menu" id="EATS-MENU">
-          <div className="items-cat">
-            <p className="menu-categories-title">STARTERS &amp; SHAREABLES</p>
-            <div className="items-list">
-              <img
-                className="item-list-image"
-                src="https://images.mydigimenu.com/media/ClCan7aQ9k/ClCan7aQ9k-03072023070000475.jpeg?w=200&h=200"
-                alt=""
-              />
-              <div className="other-info">
-                <p className="item-name">JUMBO COMBO VEG</p>
-                <p className="description">
-                  A delectable array of our most popular veggie starters: Onion
-                  rings, potato skins, bruschetta and Southwest spring rolls.{" "}
-                </p>
-                <div className="to-buy">
-                  <p className="item-price">N50,000</p>
-                  <button className="add-button"></button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="items-list">
-            <img src="" alt="" />
-            <p className="item-name">JUMBO COMBO</p>
-            <p className="item-price"></p>
-            <div className="add-button"></div>
-          </div>
-          <div className="items-list">
-            <img src="" alt="" />
-            <p className="item-name">NACHOS</p>
-            <p className="item-price"></p>
-            <div className="add-button"></div>
-          </div>
-          <div className="items-list">
-            <img src="" alt="" />
-            <p className="item-name">WINGS</p>
-            <p className="item-price"></p>
-            <div className="add-button"></div>
-          </div>
-          <div className="items-list">
-            <img src="" alt="" />
-            <p className="item-name">ONE NIGHT IN BANGKOK</p>
-            <p className="item-price"></p>
-            <div className="add-button"></div>
-          </div>
+          {snippets}
         </div>
       </div>
     </div>
