@@ -1,8 +1,5 @@
 .itemscontainer{
-    /* background-color: rgba(255, 232, 236, 0.96); */
-    background-color: black;
-    display: flex;
-    flex-direction: column;
+    background-color: rgba(255, 232, 236, 0.96);
     background-size: cover;
     margin: 0px;
     padding: 0px;
@@ -10,12 +7,11 @@
     margin-bottom: 0px;
     width: 100vw;
     height: 100vh;
-    justify-content: flex-end;
+    display: block;
 }
 .fixedheader{
     display: flex;
     flex-direction: row;
-    /* height: 70px; */
     width: 100vw;
     justify-content: space-between;
     height: 70px;
@@ -63,13 +59,15 @@
 /* ---------------------------------------------------------------------------------------------- */
 .mobile-container {
     display: flex;
+    overflow: auto;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
     flex-direction: row;
     align-items: center;
     justify-items: center;
-    height: 44px;
+    height: 40px;
+    margin: 10px 0px 10px 0px;
   }
   
   .mobile-container::-webkit-scrollbar {
@@ -83,31 +81,32 @@
     flex: 0 0 auto;
     width: 130px;
     height: 40px;
-    margin: 10px;
+    margin: 0px 10px 0px 10px;
     background: none;
     border: 2px solid rgb(128, 52, 38);
-    color: white;
     border-radius: 10px;
+    color: rgb(157, 20, 20);
   }
   
   .red-bg {
-    background-color: rgb(128, 52, 38);
-    border: 1px solid rgba(0, 0, 0, 0);
+     background-color: rgb(128, 52, 38);
+    .menu-title-text{
+      color: rgb(249, 189, 91);
+    }
   }
 
   .menu-title {
-    color: rgb(249, 189, 91);
     font-family: PrimaryFont;
     font-size: 12px;
     font-weight: normal;
     letter-spacing: 0px;
     height: 10px;
+    color: black;
+  }
+  .menu-title-text{
+    color:rgb(128, 52, 38);
   }
   
-  .fixed-footer {
-    height: 50px;
-    background-color: #f2f2f2;
-  }
   /* --------------------------------------------------------------------------- */
   .menu {
     display: flex;
@@ -116,31 +115,67 @@
     -ms-overflow-style: none;
     flex-direction: row;
     align-items: center;
-    /* height: 170px; */
     height: fit-content;
-    margin-top: 0px;
+    margin: 10px 0px 20px 0px;
 }
 .menu::-webkit-scrollbar {
     display: none;
   }
 
 .menu-item2 {
-    width: 200px;
-    margin: 10px;
+    margin: 0px 10px 0px 10px;
     text-align: center;
+    height: 120px;
+    
 }
 
-.menu-image {
+.menu-item2 img {
     height: 80px;
     justify-content: flex-end;
     background-size: cover;
 }
 /* ----------------------------------------------------------------- */
 .items-div{
-    background-color: white;
-    height:auto;
-    display: flex;
-    flex-direction: column;
+    background: none;
     justify-content: center;
     align-items: center;
+    overflow: scroll;
+    height: 470px;
+    overflow-x: auto;
+    scrollbar-width: 20px;
 }
+.menu-categories-title{
+  color:rgb(128, 52, 38);
+  font-size: 25px;
+  font-weight: 600;
+}
+.items-list{
+  background-color: white;
+  margin: 15px;
+  height: 130px;
+  display: flex;
+  flex-direction: row;
+}
+.item-list-image{
+  height: 130px;
+}
+.other-info{
+  padding: 8px 8px 4px 8px;
+  .item-name{
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .description{
+    font-size: 12px;
+    text-align: left;
+  }
+  .to-buy{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .item-price{
+      color: rgb(128, 52, 38);
+    }
+  }
+}
+

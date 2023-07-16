@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import "./menu.css"
 import facebooklogo from "../../assets/facebook-logo.png"
 import instagramlogo from "../../assets/instagram.png"
@@ -38,5 +39,42 @@ const Menu = () =>{
             </div>
           );
 }
-export default Menu;
+=======
+import "./menu.css";
+import facebooklogo from "../../assets/facebook-logo.png";
+import instagramlogo from "../../assets/instagram.png";
+import bell from "../../assets/bell.png";
+import logo from "../../assets/Logo.png";
 
+const Menu = () => {
+  return (
+    <div className="parenta">
+      <div className="top-container">
+        <div className="notification-div">
+          <img className="bell" src={bell} alt="notification image" />
+        </div>
+      </div>
+
+      <div className="middle-container">
+        <div className="logo-div">
+          <img class="logo" src={logo} alt="logo image" />
+        </div>
+        <div className="menu-button">
+          <a className="menu-text" href="/Menucat">
+            Menu
+          </a>
+        </div>
+        <div className="down-cont">
+          <div className="facebook-cont">
+            <img className="facebook" src={facebooklogo} alt="" />
+          </div>
+          <div className="instagram-cont">
+            <img className="instagram" src={instagramlogo} alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+>>>>>>> e1f4ca9ebbf96ce8af4df57067e497e7d536ca1b
+export default Menu;
