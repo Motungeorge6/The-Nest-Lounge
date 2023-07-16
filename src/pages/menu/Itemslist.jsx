@@ -31,27 +31,37 @@ const Itemslist = () => {
         {/* --------------------------------------------------------------------------- */}
         <div className="menu-item red-bg">
           <div className="menu-title">
-            <a href="#EATS-MENU">EATS MENU</a>
+            <a className="menu-title-text" href="#EATS-MENU">
+              EATS MENU
+            </a>
           </div>
         </div>
         <div className="menu-item">
           <div className="menu-title">
-            <a href="#DRINKS-MENU">DRINKS MENU</a>
+            <a className="menu-title-text" href="#DRINKS-MENU">
+              DRINKS MENU
+            </a>
           </div>
         </div>
         <div className="menu-item">
           <div className="menu-title">
-            <a href="#SHISHA-MENU">SHISHA MENU</a>
+            <a className="menu-title-text" href="#SHISHA-MENU">
+              SHISHA MENU
+            </a>
           </div>
         </div>
         <div className="menu-item">
           <div className="menu-title">
-            <a href="#MERCHANDISE">MERCHANDISE</a>
+            <a className="menu-title-text" href="#MERCHANDISE">
+              MERCHANDISE
+            </a>
           </div>
         </div>
         <div className="menu-item">
           <div className="menu-title">
-            <a href="#HAPPY-HOUR">HAPPY HOUR</a>
+            <a className="menu-title-text" href="#HAPPY-HOUR">
+              HAPPY HOUR
+            </a>
           </div>
         </div>
       </div>
@@ -64,7 +74,6 @@ const Itemslist = () => {
             alt=""
             draggable="false"
             src="https://images.mydigimenu.com/media/ClCan7aQ9k/ClCan7aQ9k-24062019067860723.png?w=250&h=250"
-            className="menu-image"
           />
           <div className="menu-title">STARTERS &amp; SHAREABLES</div>
         </div>
@@ -74,7 +83,6 @@ const Itemslist = () => {
             alt=""
             draggable="false"
             src="https://images.mydigimenu.com/media/ClCan7aQ9k/ClCan7aQ9k-24062019063010327.png?w=250&h=250"
-            className="menu-image"
           />
           <div className="menu-title">LEGENDARY® STEAK BURGERS</div>
         </div>
@@ -84,7 +92,6 @@ const Itemslist = () => {
             alt=""
             draggable="false"
             src="https://images.mydigimenu.com/media/ClCan7aQ9k/ClCan7aQ9k-13092220097280213.jpeg?w=250&h=250"
-            className="menu-image"
           />
           <div className="menu-title">SANDWICHES</div>
         </div>
@@ -94,7 +101,6 @@ const Itemslist = () => {
             alt=""
             draggable="false"
             src="https://images.mydigimenu.com/media/ClCan7aQ9k/ClCan7aQ9k-24062019064780387.png?w=250&h=250"
-            className="menu-image"
           />
           <div className="menu-title">SALADS</div>
         </div>
@@ -104,7 +110,6 @@ const Itemslist = () => {
             alt=""
             draggable="false"
             src="https://images.mydigimenu.com/media/ClCan7aQ9k/ClCan7aQ9k-24062019065940556.png?w=250&h=250"
-            className="menu-image"
           />
           <div className="menu-title">SPECIALTY ENTRÉES</div>
         </div>
@@ -114,7 +119,6 @@ const Itemslist = () => {
             alt=""
             draggable="false"
             src="https://images.mydigimenu.com/media/ClCan7aQ9k/ClCan7aQ9k-24062019060430989.png?w=250&h=250"
-            className="menu-image"
           />
           <div className="menu-title">DESSERTS &amp; MILKSHAKES</div>
         </div>
@@ -125,161 +129,49 @@ const Itemslist = () => {
           <div className="items-cat">
             <p className="menu-categories-title">STARTERS &amp; SHAREABLES</p>
             <div className="items-list">
-              <img src="" alt="" />
-              <p className="item-name">JUMBO COMBO VEG</p>
-              <p className="item-price"></p>
-              <div className="add-button"></div>
-            </div>
-            <div className="items-list">
-              <img src="" alt="" />
-              <p className="item-name">JUMBO COMBO</p>
-              <p className="item-price"></p>
-              <div className="add-button"></div>
-            </div>
-            <div className="items-list">
-              <img src="" alt="" />
-              <p className="item-name">NACHOS</p>
-              <p className="item-price"></p>
-              <div className="add-button"></div>
-            </div>
-            <div className="items-list">
-              <img src="" alt="" />
-              <p className="item-name"></p>
-              <p className="item-price"></p>
-              <div className="add-button"></div>
-            </div>
-          </div>
-        </div>
-        {/* ----------------------------------------------------------------------------------------------------- */}
-        <div className="items-div">
-          <div className="items-menu" id="DRINKS-MENU">
-            <div className="items-cat">
-              <p className="menu-categories-title"></p>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
+              <img
+                className="item-list-image"
+                src="https://images.mydigimenu.com/media/ClCan7aQ9k/ClCan7aQ9k-03072023070000475.jpeg?w=200&h=200"
+                alt=""
+              />
+              <div className="other-info">
+                <p className="item-name">JUMBO COMBO VEG</p>
+                <p className="description">
+                  A delectable array of our most popular veggie starters: Onion
+                  rings, potato skins, bruschetta and Southwest spring rolls.{" "}
+                </p>
+                <div className="to-buy">
+                  <p className="item-price">N50,000</p>
+                  <button className="add-button"></button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        {/* ------------------------------------------------------------------------------------------------------ */}
-
-        <div className="items-div">
-          <div className="items-menu" id="SHISHA-MENU">
-            <div className="items-cat">
-              <p className="menu-categories-title"></p>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-            </div>
+          <div className="items-list">
+            <img src="" alt="" />
+            <p className="item-name">JUMBO COMBO</p>
+            <p className="item-price"></p>
+            <div className="add-button"></div>
+          </div>
+          <div className="items-list">
+            <img src="" alt="" />
+            <p className="item-name">NACHOS</p>
+            <p className="item-price"></p>
+            <div className="add-button"></div>
+          </div>
+          <div className="items-list">
+            <img src="" alt="" />
+            <p className="item-name">WINGS</p>
+            <p className="item-price"></p>
+            <div className="add-button"></div>
+          </div>
+          <div className="items-list">
+            <img src="" alt="" />
+            <p className="item-name">ONE NIGHT IN BANGKOK</p>
+            <p className="item-price"></p>
+            <div className="add-button"></div>
           </div>
         </div>
-        {/* ------------------------------------------------------------------------------------------------------ */}
-        <div className="items-div">
-          <div className="items-menu" id="MERECHANDISE">
-            <div className="items-cat">
-              <p className="menu-categories-title"></p>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* ------------------------------------------------------------------------------------------------------ */}
-        <div className="items-div">
-          <div className="items-menu" id="HAPPY-HOUR">
-            <div className="items-cat">
-              <p className="menu-categories-title"></p>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-              <div className="items-list">
-                <img src="" alt="" />
-                <p className="item-name"></p>
-                <p className="item-price"></p>
-                <div className="add-button"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* ------------------------------------------------------------------------------------------------------ */}
       </div>
     </div>
   );
