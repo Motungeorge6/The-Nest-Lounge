@@ -135,17 +135,33 @@ const Home = () => {
             type="submit"
             className="submit-button"
             onClick={handleSubmit}
+            style={{ width: "300px" }}
           >
             Find A Table
           </button>
         </div>
       </Parallax>
 
-      <Parallax
-        strength={300}
-        bgImage={Lounge}
-        style={{ height: "100vh" }}
-      ></Parallax>
+      <Parallax strength={300}>
+        <div
+          style={{
+            height: "50vh",
+            backgroundColor: "purple",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            className="address-cont"
+            style={{
+              width: "50%",
+              borderRadius: "50%",
+              backgroundColor: "red",
+              height: "50vh",
+            }}
+          ></div>
+        </div>
+      </Parallax>
     </>
   );
 };

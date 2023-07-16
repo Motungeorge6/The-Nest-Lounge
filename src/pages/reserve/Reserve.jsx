@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../pages/reserve/reserve.css";
-import image from "../../assets/backgroundimage1.jpg"
+import image from "../../assets/backgroundimage1.jpg";
 
 const Collaborate = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -25,7 +25,6 @@ const Collaborate = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [event, setEvent] = useState("");
 
-
   const handleFullNameChange = (event) => {
     setFullName(event.target.value);
   };
@@ -46,18 +45,21 @@ const Collaborate = () => {
   };
   function handleSubmit(event) {
     event.preventDefault();
-
   }
 
   return (
     <div className="collaborate-container">
       <div className="inner-container">
         <div>
-          <img src={image} alt="image" style={{
-            width: "49vw",
-            height: "100vh",
-            overflow: "hidden",
-          }}/>
+          <img
+            src={image}
+            alt="image"
+            style={{
+              width: "49vw",
+              height: "100vh",
+              overflow: "hidden",
+            }}
+          />
         </div>
       </div>
       <div className="form-container">
@@ -112,57 +114,64 @@ const Collaborate = () => {
                 name="phoneNumber"
               />
             </section>
-            <section style={{
-              position: "absolute",
-              display: "flex",
-              justifyContent: "space-between",
-              gap: "22%",
-              marginTop: "12%",
-            }}>
-            <section>
-              <label htmlFor="phoneNumber">Type of Event</label>
-             <select name="event" id="event"value={event} onChange={handleEventChange} style={{
-              width: '250px',
-              height: '50px',
-              borderRadius: '7px',
-              backgroundColor: 'rgb(225, 208, 182)'
-
-             }}>
-             <option value="">Select...</option>
-              <option>Birthday</option>
-              <option>Buffet</option>
-              <option>Friends Hangout</option>
-              <option>Office Hangout</option>
-              <option>Couple Special</option>
-              <option>Proposal</option>
-              <option>Bridal Shower</option>
-             </select>
-            </section>
-            <section>
-              <label htmlFor="">Number of people Attending</label>
-              <input
-                type="number"
-                placeholder="No of people Attending"
-                id="attendees"
-                name="attendees"
-              />
-            </section>
+            <section
+              style={{
+                position: "absolute",
+                display: "flex",
+                justifyContent: "space-between",
+                gap: "22%",
+                marginTop: "12%",
+              }}
+            >
+              <section>
+                <label htmlFor="phoneNumber">Type of Event</label>
+                <select
+                  name="event"
+                  id="event"
+                  value={event}
+                  onChange={handleEventChange}
+                  style={{
+                    width: "250px",
+                    height: "50px",
+                    marginTop: "10%",
+                    borderRadius: "7px",
+                    backgroundColor: "rgb(225, 208, 182)",
+                  }}
+                >
+                  <option value="">Select...</option>
+                  <option>Birthday</option>
+                  <option>Buffet</option>
+                  <option>Friends Hangout</option>
+                  <option>Office Hangout</option>
+                  <option>Couple Special</option>
+                  <option>Proposal</option>
+                  <option>Bridal Shower</option>
+                </select>
+              </section>
+              <section>
+                <label htmlFor="">Number of people Attending</label>
+                <input
+                  type="number"
+                  placeholder="No of people Attending"
+                  id="attendees"
+                  name="attendees"
+                />
+              </section>
             </section>
           </div>
 
           <div>
-          <button
-            type="submit"
-            className="submit-button"
-            onClick={handleSubmit}
-            style={{
-              marginTop: '130px',
-              marginLeft: '500px'
-
-            }}
-          >
-            Submit
-          </button>
+            <button
+              type="submit"
+              className="submit-button"
+              onClick={handleSubmit}
+              style={{
+                marginTop: "130px",
+                marginLeft: "500px",
+              }}
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>

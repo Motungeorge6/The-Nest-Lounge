@@ -1,29 +1,34 @@
 import { styled } from "styled-components";
 import { routes } from "../constants/routes";
 import { Link } from "react-router-dom";
-import Logo from '../assets/Logo.png'
+import Logo from "../assets/Logo.png";
 
 const NavBar = () => {
   return (
     <NavView>
       <div className="content">
         <div className="logo">
-          <img src={Logo} alt="logo" style={{width: '150px'}} className='img' />
+          <img
+            src={Logo}
+            alt="logo"
+            style={{ width: "150px" }}
+            className="img"
+          />
         </div>
 
         <div className="routes">
-          {routes.map(route => {
+          {routes.map((route) => {
             return (
-              <Link key={route.path} className='links' to={route.path}>
+              <Link key={route.path} className="links" to={route.path}>
                 {route.name}
               </Link>
-            )
+            );
           })}
         </div>
       </div>
     </NavView>
   );
-}
+};
 
 const NavView = styled.div`
   margin: 6rem;
@@ -36,12 +41,11 @@ const NavView = styled.div`
     align-items: center;
     background-color: rgb(83, 78, 51);
 
-
     .logo {
       width: 40%;
       padding: 1rem;
       height: 40%;
-      border: 1px gold solid;
+      // border: 1px gold solid;
 
       .img {
         width: 100%;
@@ -62,7 +66,6 @@ const NavView = styled.div`
       }
     }
   }
-
 `;
 
-export default NavBar
+export default NavBar;
