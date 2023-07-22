@@ -12,6 +12,7 @@ import Lounge from "../../assets/Lounge.jpg";
 import TheNest from "../../assets/The-Nest-Lounge.jpg";
 import Nest from "../../assets/The nest.jpg";
 import Bar from "../../assets/food.jpeg";
+import Sparkle from "../../assets/sparkle.png";
 import NavBar from "../../component/NavBar";
 
 const Home = () => {
@@ -142,26 +143,28 @@ const Home = () => {
         </div>
       </Parallax>
 
-      <Parallax strength={300}>
-        <div
-          style={{
-            height: "50vh",
-            backgroundColor: "purple",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            className="address-cont"
-            style={{
-              width: "50%",
-              borderRadius: "50%",
-              backgroundColor: "red",
-              height: "50vh",
-            }}
-          ></div>
+      <div>
+        <div className="bookatable">
+          <div className="topoval">
+            <img className="sparkle" src={Sparkle}></img>
+            <div className="reservation-but">
+              <a className="reserve-text" href="/Reserve">
+                Book A Table
+              </a>
+            </div>
+          </div>
+          <div className="middlecilinder">
+            <div className="address-div">Address</div>
+            <text>1A, Hughes Avenue, Yaba Lagos.</text>
+          </div>
+          <div className="bottomoval"></div>
+          <div className="opening-hours">
+            <div className="heading">Opening Hours</div>
+            <div className="open-time">Monday - Sunday 8am-1pm</div>
+            <div>08012345678</div>
+          </div>
         </div>
-      </Parallax>
+      </div>
     </>
   );
 };

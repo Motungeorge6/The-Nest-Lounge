@@ -125,3 +125,79 @@ input {
   margin-left: 3%;
   background-color: #20241a;
 }
+
+.bookatable{
+  height: 600px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color:blue;
+  justify-content: center;
+  align-items: center;
+  background: url("/src/assets/bookaba.png")  center center fixed;
+}
+.topoval{
+      width: 330px; 
+      height: 165px;
+      background-color: #e1d0b6;
+      border-radius: 50%/100% 100% 0 0; 
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .sparkle{
+        height: 20px;
+        width: 20px;
+        position: relative;
+        left : 72px;
+        top: 30px;
+      }
+      .reservation-but{
+        background: rgb(157, 20, 20);
+        border-radius: 100px;
+        font-family: 'Montserrat', sans-serif;
+        color: rgb(249, 189, 91);
+        width: 160px;
+        height: 50px;
+        font-size: 20px;
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+    }
+.middlecilinder{
+  height: 100px;
+  width: 330px;
+  background-color:#e1d0b6;
+  /* margin-top: 0;
+  padding: 0; */
+}
+.bottomoval{
+  width: 330px; 
+  height: 165px;
+  background-color: #e1d0b6;
+  border-radius: 50%/100% 100% 0 0; 
+  transform:scaleY(-1);
+  position: relative;
+  overflow: hidden;
+}
+.address-div{
+  font-size: 40px;
+  color: rgb(32, 36, 26);
+}
+.opening-hours{
+  position: relative;
+  bottom: 100px;
+.heading{
+  font-size: 20px;
+  font-weight: 600px;
+  }
+.open-time{
+  margin-bottom: 3px;
+  font-weight: 400;
+}
+}
