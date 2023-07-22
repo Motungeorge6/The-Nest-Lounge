@@ -130,38 +130,37 @@ const Home = () => {
               date, and time of your reservation.
             </p>
           </div>
-
-          <button
-            type="submit"
-            className="submit-button"
-            onClick={handleSubmit}
-            style={{ width: "300px" }}
+          <div
+            className="address-cont"
+            style={{
+              width: "40%",
+              borderRadius: "50%",
+              backgroundColor: "red",
+              height: "60vh",
+            }}
           >
-            Find A Table
-          </button>
+            <button
+              type="submit"
+              className="submit-button"
+              onClick={handleSubmit}
+              style={{ width: "300px" }}
+            >
+              Find A Table
+            </button>
+          </div>
         </div>
       </Parallax>
 
-      <Parallax strength={300}>
+      {/* <Parallax strength={300}>
         <div
           style={{
-            height: "50vh",
+            height: "100vh",
             backgroundColor: "purple",
             justifyContent: "center",
             alignItems: "center",
           }}
-        >
-          <div
-            className="address-cont"
-            style={{
-              width: "50%",
-              borderRadius: "50%",
-              backgroundColor: "red",
-              height: "50vh",
-            }}
-          ></div>
-        </div>
-      </Parallax>
+        ></div>
+      </Parallax> */}
     </>
   );
 };
