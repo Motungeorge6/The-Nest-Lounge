@@ -79,7 +79,9 @@ const Itemslist = () => {
             </p>
             <div className="to-buy">
               <p className="item-price">₦15500.00</p>
-              <div className="add-button">ADD</div>
+              <div className="add-button">
+                <div className="add">ADD</div>
+              </div>
             </div>
           </div>
         </div>

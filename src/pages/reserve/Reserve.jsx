@@ -48,83 +48,67 @@ const Collaborate = () => {
   }
 
   return (
-    <div className="collaborate-container">
-      <div className="inner-container">
-        <div>
-          <img
-            src={image}
-            alt="image"
-            style={{
-              width: "49vw",
-              height: "100vh",
-              overflow: "hidden",
-            }}
-          />
-        </div>
-      </div>
-      <div className="form-container">
-        <div className="form-inner">
-          <div className="form-row">
-            <section>
-              {" "}
-              <label>Full Name</label>
-              <input
-                type="text"
-                placeholder="Full Name"
-                value={fullName}
-                onChange={handleFullNameChange}
-                id="fullName"
-                name="FullName"
-              />{" "}
-            </section>
-            <section>
-              <label>Date Of Birth</label>
-              <input
-                type="date"
-                placeholder="Date Of Birth"
-                id="date"
-                name="date"
-                value={date}
-                onChange={handleDateChange}
-              />
-            </section>
-          </div>
+    <div className="reserve-cont">
+      <div className="outta-container">
+        <div className="inner-container">
+          <div className="first-inner-cont">
+            <div className="first-form">
+              <div className="inputs">
+                <div className="inputs-title">Full Name</div>
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  value={fullName}
+                  onChange={handleFullNameChange}
+                  id="fullName"
+                  name="FullName"
+                />
+              </div>
+              <div className="inputs">
+                <div className="inputs-title">Date Of Birth</div>
+                <input
+                  type="date"
+                  placeholder="Date Of Birth"
+                  id="date"
+                  name="date"
+                  value={date}
+                  onChange={handleDateChange}
+                />
+              </div>
 
-          <div className="form-row">
-            <section>
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="text"
-                value={email}
-                onChange={handleEmailChange}
-                placeholder="e.g @example.com"
-                id="email"
-                name="email"
-              />
-            </section>
-            <section>
-              {" "}
-              <label htmlFor="phoneNumber">Phone Number</label>
-              <input
-                type="text"
-                value={phoneNumber}
-                onChange={handlePhoneNumberChange}
-                placeholder="phone number"
-                id="phoneNumber"
-                name="phoneNumber"
-              />
-            </section>
-            <section
-              style={{
-                position: "absolute",
-                display: "flex",
-                justifyContent: "space-between",
-                gap: "22%",
-                marginTop: "12%",
-              }}
-            >
-              <section>
-                <label htmlFor="phoneNumber">Type of Event</label>
+              <div className="inputs">
+                <div className="inputs-title" htmlFor="email">
+                  Email Address
+                </div>
+                <input
+                  type="text"
+                  value={email}
+                  onChange={handleEmailChange}
+                  placeholder="e.g @example.com"
+                  id="email"
+                  name="email"
+                />
+              </div>
+            </div>
+            <div className="second-form">
+              <div className="inputs">
+                <div className="inputs-title" htmlFor="phoneNumber">
+                  Phone Number
+                </div>
+                <input
+                  type="text"
+                  value={phoneNumber}
+                  onChange={handlePhoneNumberChange}
+                  placeholder="phone number"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                />
+              </div>
+
+              <div className="inputs">
+                <div className="inputs-title" htmlFor="phoneNumber">
+                  Type of Event
+                </div>
                 <select
                   name="event"
                   id="event"
@@ -133,12 +117,11 @@ const Collaborate = () => {
                   style={{
                     width: "250px",
                     height: "50px",
-                    marginTop: "10%",
                     borderRadius: "7px",
                     backgroundColor: "rgb(225, 208, 182)",
                   }}
                 >
-                  <option value="">Select...</option>
+                  <option value="">Select type of event...</option>
                   <option>Birthday</option>
                   <option>Buffet</option>
                   <option>Friends Hangout</option>
@@ -147,31 +130,26 @@ const Collaborate = () => {
                   <option>Proposal</option>
                   <option>Bridal Shower</option>
                 </select>
-              </section>
-              <section>
-                <label htmlFor="">Number of people Attending</label>
+              </div>
+              <div className="inputs">
+                <div className="inputs-title" htmlFor="">
+                  Attendees
+                </div>
                 <input
                   type="number"
-                  placeholder="No of people Attending"
+                  placeholder="Number of people Attending"
                   id="attendees"
                   name="attendees"
                 />
-              </section>
-            </section>
+              </div>
+            </div>
           </div>
-
-          <div>
-            <button
-              type="submit"
-              className="submit-button"
-              onClick={handleSubmit}
-              style={{
-                marginTop: "130px",
-                marginLeft: "500px",
-              }}
-            >
-              Submit
-            </button>
+          <div className="second-inner-cont">
+            <div className="submit-contai">
+              <a className="submits-text" href="">
+                SUBMIT
+              </a>
+            </div>
           </div>
         </div>
       </div>
