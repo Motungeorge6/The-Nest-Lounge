@@ -49,7 +49,6 @@ const Home = () => {
 
   return (
     <>
-      <SideBarButton />
       <Parallax strength={300} bgImage={TheNest} style={{ height: "100vh" }}>
         <NavBar />
       </Parallax>
@@ -141,6 +140,7 @@ const Home = () => {
             <div className="heading">Opening Hours</div>
             <div className="open-time">Monday - Sunday 8am-1pm</div>
             <div>08012345678</div>
+            <img className="down-sparkle" src={Sparkle}></img>
           </div>
         </div>
       </div>
