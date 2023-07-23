@@ -122,36 +122,6 @@ const Home = () => {
         </div>
       </Parallax>
 
-      <Parallax strength={300} className="reserve-containers">
-        <div className="reserve-container">
-          <div className="title-container">
-            <h1>Reserve a Table</h1>
-            <p>
-              To help us find the best table, select the preferred party size,
-              date, and time of your reservation.
-            </p>
-          </div>
-          <div
-            className="address-cont"
-            style={{
-              width: "40%",
-              borderRadius: "50%",
-              backgroundColor: "red",
-              height: "60vh",
-            }}
-          >
-            <button
-              type="submit"
-              className="submit-button"
-              onClick={handleSubmit}
-              style={{ width: "300px" }}
-            >
-              Find A Table
-            </button>
-          </div>
-        </div>
-      </Parallax>
-
       <div>
         <div className="bookatable">
           <div className="topoval">
