@@ -176,6 +176,16 @@
     .item-price{
       color: rgb(128, 52, 38);
     }
+    .add-button{
+      background-color: rgba(128, 52, 38, 0.942);
+      border-radius: 10px;
+      width: 70px;
+      height:33px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color:rgb(249, 189, 91);
+    }
   }
 }
 
