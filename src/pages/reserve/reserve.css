@@ -1,6 +1,6 @@
 .reserve-cont {
   width: 100vw;
-  background-color: rgb(36, 26, 26);
+  background-color: black;
   height: 100vh;
   display: flex;
   flex-direction: row;
