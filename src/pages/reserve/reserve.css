@@ -1,31 +1,29 @@
 .reserve-cont {
   width: 100vw;
-  background-color: rgb(32, 36, 26);
+  background-color: rgb(36, 26, 26);
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: url(/src/assets/backgroundimage1.jpg) no-repeat center center fixed;
+  flex-direction: row;
   overflow: hidden;
   background-size: cover;
 }
 .outta-container{
   border: 4px solid #ff2e2e;
-  height: 459px;
-  width: 808px;
+  height: 100vh;
+  width: 360px;
   border-radius: 40px;
 }
 
 .inner-container{
-  height: 452px;
-  width: 800px;
+  height: 99.99%;
+  width: 351px;
   border-radius: 36px;
   background-color: #f1e1d6;
   display: flex;
   flex-direction: column;
   border: 2px solid black;
-  .first-form{
+
+  .form-table{
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -33,14 +31,7 @@
     justify-content: space-between;
     padding: 50px;
   } 
-  .second-form{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-  }
+
 }
 .first-inner-cont{
   display: flex;
@@ -66,6 +57,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
+
   .submits-text{
     color: #ff2e2e;
   }
@@ -78,12 +71,15 @@
 .inputs{
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  margin-bottom: 18px;
+  color: ;
 }
 .inputs-title{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
+  color: rgb(28, 95, 124);
 }
 
 
@@ -94,17 +90,6 @@
   width: 50%;
   padding: 0 3%;
   height: 100vh;
-}
-
-.form-inner {
-  display: flex;
-  align-items: center;
-  background-color: #fff2c7;
-  width: 100%;
-  padding: 5%;
-  border-radius: 10px;
-  flex-direction: column;
-  height: 55vh;
 }
 
 .form-row {
@@ -120,11 +105,12 @@
   display: flex;
   flex-direction: column;
 }
-input {
+
+.input {
   border: 1px solid transparent;
   height: 50px;
   padding: 2%;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .dropdown-container {
@@ -179,3 +165,18 @@ input {
   padding: 2%;
 }
 
+.second-outta-cont{
+  height: 100%;
+  background-color: black;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  /* background: url(/src/assets/Logo.png) no-repeat center center fixed; */
+}
+.tomove{
+  background: none;
+  height: 100px;
+  width: 10%;
+}
