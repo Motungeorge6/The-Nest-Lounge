@@ -17,11 +17,11 @@ const Reserve = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
 
-    emailjs.sendForm("service_ge6psds", "template_a1w3gxp", formData);
-  };
+  //   emailjs.sendForm("service_ge6psds", "template_a1w3gxp", formData);
+  // };
 
   const [fullName, setFullName] = useState("");
   const [date, setDate] = useState("");
