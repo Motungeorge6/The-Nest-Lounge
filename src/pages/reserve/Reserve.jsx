@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 import "../../pages/reserve/reserve.css";
 import image from "../../assets/backgroundimage1.jpg";
+import emailjs from "emailjs-com";
 
-const Collaborate = () => {
-  const [selectedOption, setSelectedOption] = useState("");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
+const Reserve = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    dob: "",
+    phone: "",
+    type: "",
+    attend: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  const handleOptionSelect = (option) => {
-    setSelectedOption(option);
-    setIsDropdownOpen(false);
+    emailjs.sendForm("service_ge6psds", "template_a1w3gxp", formData);
   };
 
   const [fullName, setFullName] = useState("");
@@ -43,9 +47,6 @@ const Collaborate = () => {
   const handleEventChange = (event) => {
     setEvent(event.target.value);
   };
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
 
   return (
     <div className="reserve-cont">
@@ -157,4 +158,4 @@ const Collaborate = () => {
   );
 };
 
-export default Collaborate;
+export default Reserve;
