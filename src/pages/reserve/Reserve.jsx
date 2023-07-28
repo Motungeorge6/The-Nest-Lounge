@@ -19,8 +19,6 @@ const Reserve = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm("service_ge6psds", "template_a1w3gxp", formData);
   };
 
   const [fullName, setFullName] = useState("");
