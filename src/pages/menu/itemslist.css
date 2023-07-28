@@ -18,6 +18,9 @@
 }
 .left-header{
     width: 100px;
+    display: flex;
+    align-items: start;
+    margin-left:8px ;
 }
 .right-header{
     width: 100px;

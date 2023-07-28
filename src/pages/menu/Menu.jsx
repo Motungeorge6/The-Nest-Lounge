@@ -23,6 +23,11 @@ const Menu = () => {
             Menu
           </a>
         </div>
+        <div className="bookatable-button">
+          <a className="menu-text" href="/Reserve">
+            Book a Table
+          </a>
+        </div>
         <div className="down-cont">
           <div className="facebook-cont">
             <img className="facebook" src={facebooklogo} alt="" />
