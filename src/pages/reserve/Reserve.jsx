@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../pages/reserve/reserve.css";
 import image from "../../assets/backgroundimage1.jpg";
+import backmg from "../../assets/Logo.png";
 
 const Collaborate = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -52,7 +53,7 @@ const Collaborate = () => {
       <div className="outta-container">
         <div className="inner-container">
           <div className="first-inner-cont">
-            <div className="first-form">
+            <div className="form-table">
               <div className="inputs">
                 <div className="inputs-title">Full Name</div>
                 <input
@@ -89,8 +90,7 @@ const Collaborate = () => {
                   name="email"
                 />
               </div>
-            </div>
-            <div className="second-form">
+
               <div className="inputs">
                 <div className="inputs-title" htmlFor="phoneNumber">
                   Phone Number
@@ -142,16 +142,19 @@ const Collaborate = () => {
                   name="attendees"
                 />
               </div>
-            </div>
-          </div>
-          <div className="second-inner-cont">
-            <div className="submit-contai">
-              <a className="submits-text" href="">
-                SUBMIT
-              </a>
+
+              <div className="submit-contai">
+                <a className="submits-text" href="">
+                  SUBMIT
+                </a>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="second-outta-cont">
+        <div className="tomove"></div>
+        <img src={backmg} alt="" />
       </div>
     </div>
   );

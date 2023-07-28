@@ -93,9 +93,11 @@ const Itemslist = () => {
     <div className="itemscontainer">
       <div className="fixedheader">
         <div className="left-header">
-          <div className="return-button">
-            <img className="go-back" src={returnicon} alt="return-icon" />
-          </div>
+          {/* <div className="goback"> */}
+          <a className="" href="/Menucat">
+            <img className="search-it" src={returnicon} alt="search-icon" />
+          </a>
+          {/* </div> */}
         </div>
         <div className="right-header">
           <div className="favourite">
@@ -105,7 +107,7 @@ const Itemslist = () => {
               alt="favourite-icon"
             />
           </div>
-          <div className="search-bar">
+          <div className="search-bar" href="/Menucat">
             <img className="search-it" src={searchicon} alt="search-icon" />
           </div>
         </div>
