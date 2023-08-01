@@ -1,18 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./menumodal.css";
 
 const Menucat = () => {
+  const menus = [
+    "FOOD MENU",
+    "NON ALCHOHOL",
+    "ALCHOHOL",
+    "COCKTAILS",
+    "SHISHA/HOOKAH",
+    "VAPOUR",
+  ];
+  const menus_snippet = [];
+
+  menus.forEach((element) => {
+    menus_snippet.push(
+      <div class="categories">
+        <a href="/Itemslist">{element}</a>
+      </div>
+    );
+  });
 
   return (
-<div className='parentcontainer'>
-    <div class="menucontainer">
-        <div class="categories">
-          <a href="/Itemslist">EATS MENU</a></div>
-        <div class="categories">DRINKS MENU</div>
-        <div class="categories">SHISHA MENU</div>
-        <div class="categories">MERCHANDISE</div>
-        <div class="categories">HAPPY HOUR</div>
-    </div>
+    <div className="parentcontainer">
+      <div class="menucontainer">{menus_snippet}</div>
     </div>
   );
 };
