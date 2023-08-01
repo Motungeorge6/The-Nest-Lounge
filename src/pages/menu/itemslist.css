@@ -86,7 +86,7 @@
     height: 40px;
     margin: 0px 10px 0px 10px;
     background: none;
-    border: 2px solid rgb(128, 52, 38);
+    border: 2px solid rgb(128, 52, 38, 0.7);
     border-radius: 10px;
     color: rgb(157, 20, 20);
   }
@@ -105,9 +105,11 @@
     letter-spacing: 0px;
     height: 10px;
     color: black;
+    text-decoration: none;
   }
   .menu-title-text{
     color:rgb(128, 52, 38);
+    text-decoration: none;
   }
   
   /* --------------------------------------------------------------------------- */
