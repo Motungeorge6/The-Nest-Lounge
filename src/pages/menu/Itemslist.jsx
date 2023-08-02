@@ -175,7 +175,7 @@ const Itemslist = () => {
       ],
     },
     {
-      category: "SPECIALS & WEEKEND FLAVOUR",
+      category: "SPECIALS/WEEKEND FLAVOUR",
       imageSrc:
         "https://c.ndtvimg.com/2020-09/2sff5d6o_gujarati_625x300_10_September_20.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=886",
       items: [
@@ -514,32 +514,25 @@ const Itemslist = () => {
     }
   };
 
-  for (let i = 0; i < foodArray.length; i++) {
-    sub_cats.push(
-      <div className="menu-item2">
-        <img alt="" draggable="false" src={foodArray[i].imageSrc} />
-        <div className="menu-title">{foodArray[i].category}</div>
-      </div>
-    );
-  }
+  const [subCatsElements, setSubCatsElements] = useState([]);
 
-  // const handleTheCats = (indexOfMenu) => {
-  //   sub_cats = [];
-  //   for (let i = 0; i < changeTheCategoryList(indexOfMenu).length; i++) {
-  //     sub_cats.push(
-  //       <div className="menu-item2">
-  //         <img
-  //           alt=""
-  //           draggable="false"
-  //           // src={changeTheCategoryList(foodArray)[i].imageSrc}
-  //         />
-  //         <div className="menu-title">
-  //           {/* {changeTheCategoryList(foodArray)[i].category} */}
-  //         </div>
-  //       </div>
-  //     );
-  //   }
-  // };
+  const handleTheCats = (indexOfMenu) => {
+    const newSubCatsElements = changeTheCategoryList(indexOfMenu).map(
+      (item, index) => (
+        <div className="menu-item2" key={index}>
+          <img alt="" draggable="false" src={item.imageSrc} />
+          <div className="menu-title">{item.category}</div>
+        </div>
+      )
+    );
+
+    setSubCatsElements(newSubCatsElements);
+  };
+  const [subCatsElementsItems, setSubCatsElementsItems] = useState([]);
+
+  // const handleTheCatsItems=(indexOfMenu)=>{
+  //   const newSubCatsItems =
+  // }
 
   const changeTheActiveButton = (indexOfElement) => {
     setSelectedMenuIndex(indexOfElement);
@@ -553,7 +546,7 @@ const Itemslist = () => {
       onClick={() => {
         changeTheActiveButton(indexOfElement);
         console.log(`button ${menus[indexOfElement]} clicked`);
-        // handleTheCats(indexOfElement);
+        handleTheCats(indexOfElement);
       }}
     >
       <div className="menu-title">
@@ -671,7 +664,7 @@ const Itemslist = () => {
       </div>
       {/* ------------------------------------------------------------------------------------------------------ */}
       <div className="mobile-container">{menus_snippets}</div>
-      <div className="menu">{sub_cats}</div>
+      <div className="menu">{subCatsElements}</div>
       <div className="items-div">
         <div className="items-menu" id="EATS-MENU">
           {sub_cats_items}
@@ -682,9 +675,3 @@ const Itemslist = () => {
 };
 
 export default Itemslist;
-{
-  /* <div className="menu-item2">
-  <img alt="" draggable="false" src={foodArray[i].imageSrc} />
-  <div className="menu-title">{foodArray[i].category}</div>
-</div>; */
-}
