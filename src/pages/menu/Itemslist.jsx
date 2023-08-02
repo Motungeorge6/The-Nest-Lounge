@@ -494,7 +494,7 @@ const Itemslist = () => {
     "VAPOUR",
   ];
 
-  const sub_cats = [];
+  let sub_cats = [];
   const sub_cats_items = [];
   const [selectedMenuIndex, setSelectedMenuIndex] = useState(0);
 
@@ -523,22 +523,23 @@ const Itemslist = () => {
     );
   }
 
-  const handleTheCats = (indexOfMenu) => {
-    for (let i = 0; i < changeTheCategoryList(indexOfMenu).length; i++) {
-      sub_cats.push(
-        <div className="menu-item2">
-          <img
-            alt=""
-            draggable="false"
-            src={changeTheCategoryList(foodArray)[i].imageSrc}
-          />
-          <div className="menu-title">
-            {changeTheCategoryList(foodArray)[i].category}
-          </div>
-        </div>
-      );
-    }
-  };
+  // const handleTheCats = (indexOfMenu) => {
+  //   sub_cats = [];
+  //   for (let i = 0; i < changeTheCategoryList(indexOfMenu).length; i++) {
+  //     sub_cats.push(
+  //       <div className="menu-item2">
+  //         <img
+  //           alt=""
+  //           draggable="false"
+  //           // src={changeTheCategoryList(foodArray)[i].imageSrc}
+  //         />
+  //         <div className="menu-title">
+  //           {/* {changeTheCategoryList(foodArray)[i].category} */}
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  // };
 
   const changeTheActiveButton = (indexOfElement) => {
     setSelectedMenuIndex(indexOfElement);
@@ -552,7 +553,7 @@ const Itemslist = () => {
       onClick={() => {
         changeTheActiveButton(indexOfElement);
         console.log(`button ${menus[indexOfElement]} clicked`);
-        handleTheCats(indexOfElement);
+        // handleTheCats(indexOfElement);
       }}
     >
       <div className="menu-title">
