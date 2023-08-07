@@ -1,51 +1,97 @@
 import React, { useState } from "react";
 import "../../pages/reserve/reserve.css";
-import image from "../../assets/backgroundimage1.jpg";
 import backmg from "../../assets/Logo.png";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { registerLocale } from "react-datepicker";
+import en from "date-fns/locale/en-US"; // Import the English locale file
+
+registerLocale("en", en);
 
 const Reserve = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    dob: "",
+    dob: null,
     phone: "",
     type: "",
     attend: "",
   });
+
+  const [ageError, setAgeError] = useState("");
+  const [attendeesError, setAttendeesError] = useState("");
+  const [submitError, setSubmitError] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
+  function calculateAge(birthDate) {
+    const today = new Date();
+    const dob = new Date(birthDate);
+    const age = today.getFullYear() - dob.getFullYear();
+    const monthDiff = today.getMonth() - dob.getMonth();
 
-  //   emailjs.sendForm("service_ge6psds", "template_a1w3gxp", formData);
-  // };
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+      return age - 1;
+    }
 
-  const [fullName, setFullName] = useState("");
-  const [date, setDate] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [event, setEvent] = useState("");
+    return age;
+  }
 
-  const handleFullNameChange = (event) => {
-    setFullName(event.target.value);
+  const handleDateChange = (date) => {
+    setFormData({ ...formData, dob: date });
+
+    // Check age and update error message
+    const age = calculateAge(date);
+    if (age < 18) {
+      setAgeError("You must be 18 or older to make a reservation.");
+    } else {
+      setAgeError("");
+    }
   };
 
-  const handleDateChange = (event) => {
-    setDate(event.target.value);
+  const handleAttendeesChange = (event) => {
+    const value = event.target.value;
+    setFormData({ ...formData, attend: value });
+
+    if (parseInt(value, 10) > 75) {
+      setAttendeesError("Number of attendees cannot exceed 75.");
+    } else {
+      setAttendeesError("");
+    }
   };
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
+  const CustomDatePickerInput = ({ value, onClick }) => (
+    <input
+      type="text"
+      value={value}
+      onClick={onClick}
+      placeholder="Day Month Year"
+      className="custom-date-input"
+    />
+  );
 
-  const handlePhoneNumberChange = (event) => {
-    setPhoneNumber(event.target.value);
-  };
-  const handleEventChange = (event) => {
-    setEvent(event.target.value);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (ageError || attendeesError) {
+      setSubmitError("Please fix the validation errors before submitting.");
+      return; // Don't submit if there are errors
+    }
+
+    setFormData({
+      name: "",
+      email: "",
+      dob: null,
+      phone: "",
+      type: "",
+      attend: "",
+    });
+
+    setSubmitError(""); // Clear submit error when submitting successfully
+    alert("Reservation submitted successfully!");
   };
 
   return (
@@ -59,61 +105,61 @@ const Reserve = () => {
                 <input
                   type="text"
                   placeholder="Full Name"
-                  value={fullName}
-                  onChange={handleFullNameChange}
-                  id="fullName"
-                  name="FullName"
+                  value={formData.name}
+                  onChange={handleChange}
+                  name="name"
                 />
               </div>
               <div className="inputs">
                 <div className="inputs-title">Date Of Birth</div>
-                <input
-                  type="date"
-                  placeholder="Date Of Birth"
-                  id="date"
-                  name="date"
-                  value={date}
+                <DatePicker
+                  selected={formData.dob}
                   onChange={handleDateChange}
+                  dateFormat="dd/MM/yyyy"
+                  showMonthDropdown
+                  showYearDropdown
+                  dropdownMode="select"
+                  locale="en"
+                  className="custom-date-input"
+                  customInput={<CustomDatePickerInput />}
+                  yearDropdownItemNumber={100}
+                  yearDropdownMin={1900}
+                  yearDropdownMax={new Date().getFullYear()}
                 />
+                {ageError && <div className="error-message">{ageError}</div>}
               </div>
-
               <div className="inputs">
                 <div className="inputs-title" htmlFor="email">
                   Email Address
                 </div>
                 <input
                   type="text"
-                  value={email}
-                  onChange={handleEmailChange}
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="e.g @example.com"
-                  id="email"
                   name="email"
                 />
               </div>
-
               <div className="inputs">
-                <div className="inputs-title" htmlFor="phoneNumber">
+                <div className="inputs-title" htmlFor="phone">
                   Phone Number
                 </div>
                 <input
                   type="text"
-                  value={phoneNumber}
-                  onChange={handlePhoneNumberChange}
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="phone number"
-                  id="phoneNumber"
-                  name="phoneNumber"
+                  name="phone"
                 />
               </div>
-
               <div className="inputs">
-                <div className="inputs-title" htmlFor="phoneNumber">
+                <div className="inputs-title" htmlFor="type">
                   Type of Event
                 </div>
                 <select
-                  name="event"
-                  id="event"
-                  value={event}
-                  onChange={handleEventChange}
+                  name="type"
+                  value={formData.type}
+                  onChange={handleChange}
                   style={{
                     width: "250px",
                     height: "50px",
@@ -132,19 +178,25 @@ const Reserve = () => {
                 </select>
               </div>
               <div className="inputs">
-                <div className="inputs-title" htmlFor="">
+                <div className="inputs-title" htmlFor="attend">
                   Attendees
                 </div>
                 <input
                   type="number"
                   placeholder="Number of people Attending"
-                  id="attendees"
-                  name="attendees"
+                  value={formData.attend}
+                  onChange={handleAttendeesChange}
+                  name="attend"
                 />
+                {attendeesError && (
+                  <div className="error-message">{attendeesError}</div>
+                )}
               </div>
-
               <div className="submit-contai">
-                <a className="submits-text" href="">
+                {submitError && (
+                  <div className="error-message">{submitError}</div>
+                )}
+                <a className="submits-text" href="" onClick={handleSubmit}>
                   SUBMIT
                 </a>
               </div>
