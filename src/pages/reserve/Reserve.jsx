@@ -76,10 +76,15 @@ const Reserve = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (ageError || attendeesError) {
-      setSubmitError("Please fix the validation errors before submitting.");
+    if (formData.dob === null || attendeesError) {
+      alert("Please fix the validation errors before submitting.");
+      // setSubmitError("Please fix the validation errors before submitting.");
       return; // Don't submit if there are errors
     }
+    // if (!formData.email.match("[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$")) {
+    //   window.alert("email is not valid");
+    //   return;
+    // }
 
     setFormData({
       name: "",
@@ -158,6 +163,7 @@ const Reserve = () => {
                 </div>
                 <select
                   name="type"
+                  className="custom-select"
                   value={formData.type}
                   onChange={handleChange}
                   style={{
