@@ -2,14 +2,7 @@ import React, { useState } from "react";
 import "./menumodal.css";
 
 const Menucat = () => {
-  const menus = [
-    "FOOD MENU",
-    "NON ALCHOHOL",
-    "ALCHOHOL",
-    "COCKTAILS",
-    "SHISHA/HOOKAH",
-    "VAPOUR",
-  ];
+  const menus = ["FOOD MENU", "DRINKS MENU", "OTHERS"];
   const menus_snippet = [];
 
   menus.forEach((element) => {
